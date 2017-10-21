@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.a7learn.expert.androidexpert.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Android Expert"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_linearLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/primary_button_background"
+        android:text="LinearLauyout"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/button_RelativeLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/primary_button_background"
+        android:text="Relative Layout"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/button_FrameLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/primary_button_background"
+        android:text="FrameLayout"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/button_Views"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/primary_button_background"
+        android:text="Views"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/button_ConstraintLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/primary_button_background"
+        android:text="ConstraintLayout"
+        android:textColor="@color/white" />
+</LinearLayout>

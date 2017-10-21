@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">متخصصان اندروید</string>
+    <string name="views_viewWebSite">مشاهده وب سایت</string>
+    <string name="views_editName">ویرایش نام</string>
+    <string name="views_saveName">ذخیره نام</string>
+    <string name="views_alborz">البرز، کرج</string>
+    <string name="views_tehran">تهران، تهران</string>
+    <string name="views_gilan">گیلان، رشت</string>
+    <string name="views_android">برنامه نویسی اندروید</string>
+    <string name="views_ui">طراحی رابط کاربری</string>
+    <string name="views_deepLearning">یادگیری عمیق</string>\
+    <string name="views_saveInformation">ذخیره اطلاعات</string>
+    <string name="views_skills">مهارت ها</string>
+    <string name="views_provinceCity">استان و شهر</string>
+    <string name="views_enterYourFirstName">نام را اینجا وارد کنید…</string>
+    <string name="views_enterYourLastName">نام خانوادگی را اینجا وارد کنید…</string>
+</resources>

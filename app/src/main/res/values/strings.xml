@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AndroidExpert</string>
+    <string name="views_viewWebSite">View Website</string>
+    <string name="views_editName">Edit Name</string>
+    <string name="views_saveName">Save Name</string>
+    <string name="views_alborz">Alborz, Karaj</string>
+    <string name="views_tehran">Tehran, Tehran</string>
+    <string name="views_gilan">Gilan, Rasht</string>
+    <string name="views_android">Android Development</string>
+    <string name="views_ui">Ui Design</string>
+    <string name="views_deepLearning">Deep Learning</string>\
+    <string name="views_saveInformation">Save Information</string>
+    <string name="views_skills">Skills</string>
+    <string name="views_provinceCity">Province, City</string>
+    <string name="views_enterYourFirstName">Enter your first name here…</string>
+    <string name="views_enterYourLastName">Enter your last name here…</string>
+</resources>
