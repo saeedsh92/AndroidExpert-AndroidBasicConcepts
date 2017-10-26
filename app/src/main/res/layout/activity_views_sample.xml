@@ -3,25 +3,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.a7learn.expert.androidexpert.ViewsSampleActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_viewsSample_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_viewsSample_backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                app:srcCompat="@drawable/ic_arrow_back_black_24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@id/iv_viewsSample_backButton"
+                android:text="Android Simple Views"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="18sp" />
+        </RelativeLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Android Simple Views"
-            android:textColor="@color/primaryTextColor"
-            android:textSize="18sp" />
     </android.support.v7.widget.Toolbar>
 
     <Button
         android:id="@+id/button_viewsSample_saveInformation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_action_name"
+        android:drawablePadding="20dp"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
         android:background="@color/colorAccent"
