@@ -1,0 +1,25 @@
+[
+  {
+    "first_name": "Majid",
+    "last_name": "Arabi",
+    "age": 24,
+    "sample_boolean": true
+  },
+  {
+    "first_name": "Parsa",
+    "last_name": "Dadras",
+    "age": 20,
+    "sample_boolean": false,
+    "skills":[
+      "HTML",
+      "Css",
+      "Java"
+    ],
+    "certificates":[
+      {
+        "name":"phd",
+        "university":"Sharif"
+      }
+    ]
+  }
+]

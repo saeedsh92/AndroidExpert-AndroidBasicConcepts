@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context="com.a7learn.expert.androidexpert.ActivityForResultSample">
+    <EditText
+        android:id="@+id/editText_result_fullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="FullName"/>
+    <Button
+        android:id="@+id/btn_result_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/primary_button_background"
+        android:textColor="@color/white"
+        android:text="Save"/>
+</LinearLayout>

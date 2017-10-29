@@ -65,4 +65,14 @@
         android:background="@drawable/primary_button_background"
         android:text="ConstraintLayout"
         android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/button_startActivityForResult"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/primary_button_background"
+        android:text="StartActivityForResult"
+        android:textColor="@color/white" />
 </LinearLayout>

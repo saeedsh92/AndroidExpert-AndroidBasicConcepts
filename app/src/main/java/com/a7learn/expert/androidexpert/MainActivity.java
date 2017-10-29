@@ -6,17 +6,26 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
+    private static final int REQUEST_CODE = 1001;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        int x=100;
+        int x = 100;
 
-        x+=200;
+        x += 200;
 
         Button viewsSampleButton = (Button) findViewById(R.id.button_Views);
         viewsSampleButton.setOnClickListener(new View.OnClickListener() {
@@ -33,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         linearLayoutSample.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,LinearLayoutSampleActivity.class);
+                Intent intent = new Intent(MainActivity.this, LinearLayoutSampleActivity.class);
                 startActivity(intent);
             }
         });
@@ -42,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         relativeLayoutSample.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,RelativeLayoutSampleActivity.class);
+                Intent intent = new Intent(MainActivity.this, RelativeLayoutSampleActivity.class);
                 startActivity(intent);
             }
         });
@@ -50,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         frameLayoutSample.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,FrameLayoutSampleActivity.class);
+                Intent intent = new Intent(MainActivity.this, FrameLayoutSampleActivity.class);
                 startActivity(intent);
             }
         });
@@ -62,7 +71,64 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button btnStartActivityForResult = (Button) findViewById(R.id.button_startActivityForResult);
+        btnStartActivityForResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ActivityForResultSample.class);
+                startActivityForResult(intent, REQUEST_CODE);
+            }
+        });
+
+        JSONArray students = new JSONArray();
+        JSONObject student = new JSONObject();
+        try {
+            student.put("first_name", "sdsd");
+            student.put("last_name", "asdasdasd");
+            student.put("age", 24);
+
+            JSONArray skills = new JSONArray();
+            skills.put("HTML");
+            skills.put("CSS");
+            student.put("skills", skills);
+
+            students.put(student);
+
+            JSONObject certificate = new JSONObject();
+            certificate.put("name", "dasdas");
+            certificate.put("university", "sdasd");
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        NewsApiService newsApiService=new NewsApiService(this);
+        newsApiService.getArticles("techcrunch", new NewsApiService.ResultCallback() {
+            @Override
+            public void onArticlesReceived(List<Article> articles) {
+                if (articles.size() > 0) {
+                    Toast.makeText(MainActivity.this, "دریافت شد", Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onError(String message) {
+                Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE &&
+                resultCode == RESULT_OK &&
+                data != null) {
+            String fullName = data.getStringExtra(ActivityForResultSample.RESULT_KEY);
+            Toast.makeText(MainActivity.this, fullName, Toast.LENGTH_LONG).show();
+        }
+    }
 }
