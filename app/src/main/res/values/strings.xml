@@ -14,4 +14,8 @@
     <string name="views_provinceCity">Province, City</string>
     <string name="views_enterYourFirstName">Enter your first name here…</string>
     <string name="views_enterYourLastName">Enter your last name here…</string>
+
+    <string name="newsList_getArticlesErrorMessage">Get Articles Server Error</string>
+    <string name="newsList_getSourcesErrorMessage">Get Sources Server Error</string>
+
 </resources>

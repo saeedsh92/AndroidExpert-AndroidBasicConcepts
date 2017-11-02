@@ -75,4 +75,10 @@
         android:background="@drawable/primary_button_background"
         android:text="StartActivityForResult"
         android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/button_newsApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show NewsApp"/>
 </LinearLayout>

@@ -3,10 +3,12 @@ package com.a7learn.expert.androidexpert;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.a7learn.expert.androidexpert.newsapp.view.NewsListActivity;
+import com.a7learn.expert.androidexpert.newsapp.model.Article;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -97,8 +99,7 @@ public class MainActivity extends AppCompatActivity {
             JSONObject certificate = new JSONObject();
             certificate.put("name", "dasdas");
             certificate.put("university", "sdasd");
-
-
+            
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -115,6 +116,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onError(String message) {
                 Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
+            }
+        });
+
+        Button newsAppButton=(Button)findViewById(R.id.button_newsApp);
+        newsAppButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, NewsListActivity.class));
             }
         });
 

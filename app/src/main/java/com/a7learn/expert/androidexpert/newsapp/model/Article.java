@@ -1,4 +1,4 @@
-package com.a7learn.expert.androidexpert;
+package com.a7learn.expert.androidexpert.newsapp.model;
 
 /**
  * Created by user on 10/29/2017.

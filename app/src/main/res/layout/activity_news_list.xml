@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.a7learn.expert.androidexpert.newsapp.view.NewsListActivity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="News"/>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_newsList_sources"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_newsList_articles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ProgressBar
+            android:id="@+id/progressBar_newsList"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginBottom="70dp"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+
+</LinearLayout>

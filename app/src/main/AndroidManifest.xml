@@ -22,10 +22,9 @@
         <activity android:name=".LinearLayoutSampleActivity" />
         <activity android:name=".RelativeLayoutSampleActivity" />
         <activity android:name=".FrameLayoutSampleActivity" />
-        <activity android:name=".RecyclerViewSample">
-
-        </activity>
-        <activity android:name=".ActivityForResultSample"></activity>
+        <activity android:name=".RecyclerViewSample"></activity>
+        <activity android:name=".ActivityForResultSample" />
+        <activity android:name=".newsapp.view.NewsListActivity"></activity>
     </application>
 
 </manifest>
